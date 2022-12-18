@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -62,13 +63,15 @@ nav > ul {
 
 .nav-item {
   margin-top: 1rem;
-  transition: transform 0.2s;
+  transition: all 0.2s;
 }
 .nav-item:hover,
 .nav-item:focus {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 .nav-item:active {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -132,15 +135,17 @@ main {
   color: var(--proj-text);
   background-color: var(--bg-sec);
 
-  transition: transform 0.2s;
+  transition: all 0.2s;
   z-index: -1;
 }
 .project:hover,
 .project:focus {
-  transform: scale(1.04);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
   z-index: 0;
 }
 .project:active {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -168,10 +173,12 @@ footer > a {
 }
 footer > a:hover,
 footer > a:focus {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
   color: var(--nav-hvr);
 }
 footer > a:active {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -189,10 +196,12 @@ footer > a:active {
 }
 .button:hover,
 .button:focus {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
   background-color: var(--text-sec);
 }
 .button:active {
+  -webkit-transform: scale(1);
   transform: scale(1);
   background-color: var(--text-prim)
 }
