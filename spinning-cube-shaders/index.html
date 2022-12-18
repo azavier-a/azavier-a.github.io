@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Azavier Allen">
+    <meta name="keywords" content="JS, WebGL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../style.css">
+
+	  <title>Spinning Cube</title>
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a href="../" tabindex="2">
+              <span class="nav-link-preview">h</span>
+              <span class="nav-link-text">home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../browse.html" id="current-page" tabindex="-1">
+              <span class="nav-link-preview">b</span>
+              <span class="nav-link-text">browse</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.html" tabindex="2">
+              <span class="nav-link-preview">a</span>
+              <span class="nav-link-text">about</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Spinning Shadered Cube</h1>
+      <canvas class="gl-canvas" id="gl-canvas" width="400" height="400">Your browser does not support WebGL.</canvas>
+    </main>
+    
+    <footer>
+      <a href="./">^ top ^</a>
+    </footer>
+    <script src="../scripts/main-margin.js"></script>
+    <script src="../utilities/gl-matrix.js"></script>
+    <script src="../utilities/boilerplate.js"></script>
+    <script src="cube.js"></script>
+  </body>
+</html>

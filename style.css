@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+
+  --nav-link: rgb(231, 216, 206);
+  --nav-prim: #b84949;
+  --nav-sec: #241f1e;
+  --nav-hvr: #a76565;
+  --nav-selec: #b84949;
+
+  --text-prim: #b6b6b6;
+  --text-sec: #ececec;
+  --bg-prim: #4d3434;
+  --bg-sec: #cf7878;
+
+  --body-text: rgb(243, 186, 186);
+  --proj-text: rgb(49, 0, 0);
+
+  --nav-width: 1.2rem;
+  --nav-width-hover: 5rem;
+}
+
+body {
+  color: var(--body-text);
+  background-color: var(--bg-prim);
+}
+
+body::-webkit-scrollbar {
+  width: 0.3rem;
+  transition: 0.2s;
+}
+body::-webkit-scrollbar-track {
+  background-color: #241f1e;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--nav-prim);
+}
+
+nav {
+  width: var(--nav-width);
+  height: 100vh;
+  position: fixed;
+  background-color: var(--nav-sec);
+  transition: width 0.2s ease-in-out;
+  overflow: hidden;
+}
+nav:hover {
+  width: var(--nav-width-hover);
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item {
+  margin-top: 1rem;
+  transition: transform 0.2s;
+}
+.nav-item:hover,
+.nav-item:focus {
+  transform: scale(1.1);
+}
+.nav-item:active {
+  transform: scale(1);
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--nav-link);
+}
+.nav-item > a:focus {
+  color: var(--nav-hvr);
+}
+#current-page {
+  color: var(--nav-selec);
+}
+
+.nav-link-text {
+  position: absolute;
+  left: -10rem;
+  transition: color 0.25s;
+}
+nav:hover .nav-link-text {
+  position: relative;
+  left: auto;
+}
+nav:hover .nav-link-text:hover {
+  color: var(--nav-hvr);
+}
+
+.nav-link-preview {
+  position: relative;
+  transition: 0.2s;
+}
+nav:hover .nav-link-preview {
+  position: absolute;
+  left: -10rem;
+}
+
+main {
+  margin-left: var(--nav-width);
+  padding: 1rem;
+  text-align: center;
+  transition: margin-left 0.2s;
+}
+
+#project-holder {
+  height: fit-content;
+}
+
+.project {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 22vw;
+  padding: 0.5rem;
+  border: 0.21rem solid var(--nav-sec);
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  
+  text-decoration: none;
+  color: var(--proj-text);
+  background-color: var(--bg-sec);
+
+  transition: transform 0.2s;
+  z-index: -1;
+}
+.project:hover,
+.project:focus {
+  transform: scale(1.04);
+  z-index: 0;
+}
+.project:active {
+  transform: scale(1);
+}
+
+.project img {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 0.19rem solid var(--nav-sec);
+  border-radius: 0.5rem;
+}
+
+footer {
+  text-align: center;
+}
+
+footer > a {
+  display: none;
+  text-decoration: none;
+  margin-left: var(--nav-width);
+  margin-bottom: 20px;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  background-color: var(--nav-sec);
+  color: var(--nav-link);
+}
+footer > a:hover,
+footer > a:focus {
+  transform: scale(1.1);
+  color: var(--nav-hvr);
+}
+footer > a:active {
+  transform: scale(1);
+}
+
+.gl-canvas {
+  border-radius: 0.23rem;
+  border: 0.21rem solid var(--nav-sec);
+}
+
+.button {
+  border-radius: 0.2rem;
+  transition: all 0.2s;
+  border: none;
+  padding: 0.1rem;
+  background-color: var(--text-prim);
+}
+.button:hover,
+.button:focus {
+  transform: scale(1.1);
+  background-color: var(--text-sec);
+}
+.button:active {
+  transform: scale(1);
+  background-color: var(--text-prim)
+}
+
+@media screen and (max-width: 860px) {
+  :root {
+    --nav-width: var(--nav-width-hover);
+  }
+
+  .project {
+    width: 40vw;
+  }
+
+  nav {
+    width: var(--nav-width-hover);
+  }
+
+  .nav-link-preview {
+    position: absolute;
+    left: -10rem;
+  }
+
+  .nav-link-text {
+    position: relative;
+    left: auto;
+  }
+
+  footer > a {
+    display: inline-block;
+  }
+
+  .gl-canvas {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .project {
+    width: 65vw;
+  }
+}

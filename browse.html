@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project Catalog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <a href="./" tabindex="0">
+            <span class="nav-link-preview">h</span>
+            <span class="nav-link-text">home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="browse.html" id="current-page" tabindex="-1">
+            <span class="nav-link-preview">b</span>
+            <span class="nav-link-text">browse</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" tabindex="1">
+            <span class="nav-link-preview">a</span>
+            <span class="nav-link-text">about</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="project-holder">
+    <a href="spinning-box/" class="project">
+      <h4>Spinning Box</h4>
+      <p>The source code is immensely unreadable.</p>
+      <img src="spinning-box/preview.png" alt="preview" width="400">
+    </a>
+    <a href="spinning-cube/" class="project">
+      <h4>Spinning Cube</h4>
+      <p>Pretty much the same as the first one, but it's slightly more unreadable.</p>
+      <img src="spinning-cube/preview.png" alt="preview" width="400">
+    </a>
+    <a href="spinning-cube-shaders/" class="project">
+      <h4>Spinning Cube Shaders</h4>
+      <p>Less spaghetti, but it could be improved with a few modifications.</p>
+      <img src="spinning-cube-shaders/preview.png" alt="preview" width="400">
+    </a>
+    <a href="spinning-cubes-shaders/" class="project">
+      <h4>Spinning Cubes Shaders</h4>
+      <p>It's here! Modular objects that I can render with shaders! The code looks good.</p>
+      <img src="spinning-cubes-shaders/preview.png" alt="preview" width="400">
+    </a>
+  </main>
+
+  <footer>
+    <a href="browse.html">^ top ^</a>
+  </footer>
+  <script src="scripts/main-margin.js"></script>
+</body>
+</html>
